@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.opengltest"
+    android:versionCode="1"
+    android:versionName="1.0" 
+    android:installLocation="preferExternal"> 
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="17" />
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:screenOrientation="landscape"
+        >
+        <activity
+            android:name="com.example.opengltest.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+          <activity android:label="DrawTest"
+				android:name=".DrawTest"
+				/>
+           <activity android:label="Triangletest"
+				android:name=".Triangletest"
+				/>
+        <activity android:label="IndexTest"
+				android:name=".IndexTest"
+				/>
+        <activity android:label="VertexColor"
+				android:name=".VertexColor"
+				/>
+        <activity android:label="VertexColor2"
+				android:name=".VertexColor2"
+				/>
+         <activity android:label="TextureTest"
+				android:name=".TextureTest"
+				/>
+         <activity android:label="TextureTest2"
+				android:name=".TextureTest2"
+				/>
+         <activity android:label="GLTransformation"
+				android:name=".GLTransformation"
+				/>
+         <activity android:label="PhysicsTest"
+				android:name=".PhysicsTest"
+				/>
+         <activity android:label="CollisionTest"
+				android:name=".CollisionTest"
+				/>
+         <activity android:label="Animation2D"
+				android:name=".Animation2D"
+				/>
+           <activity android:label="TouchTest"
+				android:name=".TouchTest"
+				/>
+           <activity android:label="CamTest"
+				android:name=".CamTest"
+				/>
+           <activity android:label="Perspective3DProjection"
+				android:name=".Perspective3DProjection"
+				/>
+             <activity android:label="Light"
+				android:name=".Light"
+				/>
+               <activity android:label="FPSNavigation"
+				android:name=".FPSNavigation"
+				/>
+                <activity android:label="OBJ3Dmodel"
+				android:name=".OBJ3Dmodel"
+				/>
+                  <activity android:label="VerletPhysics"
+				android:name=".VerletPhysics"
+				/>
+                 <activity android:label="GLES20draw"
+				android:name=".GLES20draw"
+				/>
+                  <activity android:label="GLES20attributes"
+				android:name=".GLES20attributes"
+				/>
+                   <activity android:label="GLES20uniforms"
+				android:name=".GLES20uniforms"
+				/>
+                 <activity android:label="GLES20samplers"
+				android:name=".GLES20samplers"  
+				/> 
+				
+                 <activity android:label="GLES20vbo"
+				android:name=".GLES20vbo"  
+				/> 
+				  <activity android:label="GLES20physics"
+				android:name=".GLES20physics"  
+				/> 
+					  <activity android:label="GLES20anim2D"
+				android:name=".GLES20anim2D"  
+				/> 
+                  <activity android:label="GLES20cam2D"
+				android:name=".GLES20cam2D"  
+				/>  
+				   <activity android:label="GLES20DirLight"
+				android:name=".GLES20DirLight"  
+				/> 
+				 <activity android:label="GLES20spotLight"
+				android:name=".GLES20spotLight"  
+				/> 
+				<activity android:label="GLES20navigation"
+				android:name=".GLES20navigation"  
+				/> 
+				<activity android:label="GLES20stencil"
+				android:name=".GLES20stencil"  
+				/> 
+					<activity android:label="GLES20EGL"
+				android:name=".GLES20EGL"  
+				/> 
+							<activity android:label="Modeling3D"
+				android:name=".Modeling3D"  
+				/> 
+					<activity android:label="KeyFrameAnimation3D"
+				android:name=".KeyFrameAnimation3D"  
+				/>
+						<activity android:label="MultipleShaders"
+				android:name=".MultipleShaders"  
+				/>
+						<activity android:label="SkeletalAnimation"
+				android:name=".SkeletalAnimation"  
+				/>
+    </application>
+
+</manifest>
