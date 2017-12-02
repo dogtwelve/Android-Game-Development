@@ -117,7 +117,7 @@ public class SurfaceRenderer implements GLSurfaceView.Renderer,OnTouchListener{
           + " 	float attFactor=one/(constantAtt+linearAtt*distance+quadraticAtt*distance*distance); \n"
           + " 	vec3 lightDir=normalize(lightPos-gl_Position.xyz);               \n"
           + "   vec4 tempNormal=vec4(attributeNormal.xyz,one);                   \n"
-          + "   mat4 physicsRotationM=mat4(physicsMatrix);                       \n"
+          + "   mat4 physicsRotationM=mat4(physicsMatrix[0], physicsMatrix[1], physicsMatrix[2], physicsMatrix[3]);                       \n"
           + "   physicsRotationM[3]=vec4(zero,zero,zero,one);                    \n"
           + "   tempNormal=projectionMatrix*physicsRotationM*tempNormal;         \n"
           + "   vec3 normalizedTempNormal=normalize(tempNormal.xyz);             \n"

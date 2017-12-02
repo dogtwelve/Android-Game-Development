@@ -123,7 +123,7 @@ public class SurfaceRenderer implements GLSurfaceView.Renderer,OnTouchListener{
     float deltaTime;
     float angle;
     
-    String vertexSharderSource = 
+    String vertexSharderSource =
             "attribute vec4 attributePosition;     \n"
           + "attribute vec3 attributeNormal;       \n"
           + "attribute vec2 attributeTextureCoord; \n"
@@ -146,7 +146,7 @@ public class SurfaceRenderer implements GLSurfaceView.Renderer,OnTouchListener{
           + "   gl_Position = projectionMatrix*physicsMatrix*attributePosition;  \n"
           + "   lightDir=normalize(-lightDir);                 \n"
           + "   vec4 tempNormal=vec4(attributeNormal.xyz,one);                 \n"
-          + "   mat4 physicsRotationM=mat4(physicsMatrix);                 \n"
+          + "   mat4 physicsRotationM=mat4(physicsMatrix[0], physicsMatrix[1], physicsMatrix[2], physicsMatrix[3]);                 \n"
           + "   physicsRotationM[3]=vec4(zero,zero,zero,one);                 \n"
           + "   tempNormal=projectionMatrix*physicsRotationM*tempNormal;                 \n"
           + "   vec3 normalizedTempNormal=normalize(tempNormal.xyz);                 \n"
@@ -157,7 +157,7 @@ public class SurfaceRenderer implements GLSurfaceView.Renderer,OnTouchListener{
           + "   varyingLight=emissive+(ambient*ambientColor)+(diffuse*lightDiffuse*ambientColor)+(specular*lightSpecular*ambientColor);  \n"
           + "   varyingTextureCoord=attributeTextureCoord;   \n"
           + "}           \n";
-    String fragmentShaderSource = 
+    String fragmentShaderSource =
             "precision mediump float;					 \n"
           + "varying vec2 varyingTextureCoord; 			 \n"
           + "varying vec4 varyingLight;   				 \n"
